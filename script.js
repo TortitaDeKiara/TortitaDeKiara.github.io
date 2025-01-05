@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cake = document.querySelector(".cake");
   const candleCountDisplay = document.getElementById("candleCount");
+  const htmlAudio = document.getElementById("audio");
   let candles = [];
   let audioContext;
   let analyser;
@@ -89,6 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
           triggerConfetti();
           endlessConfetti(); // Start the endless confetti
         }, 200);
+        if (htmlAudio) {
+          htmlAudio.muted = true; // Mutear el audio
+        }
         audio.play();
       }
     }
